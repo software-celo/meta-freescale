@@ -10,9 +10,8 @@ inherit deploy python3native autotools
 DEPENDS = "python3-pycrypto-native u-boot-mkimage-native"
 
 SRCBRANCH = "lf-5.4.y"
-OPTEE_OS_SRC ?= "git://source.codeaurora.org/external/imx/imx-optee-os.git;protocol=https"
 SRC_URI = "\
-	${OPTEE_OS_SRC};branch=${SRCBRANCH} \
+	git://github.com/nxp-imx/imx-optee-os.git;protocol=https;branch=${SRCBRANCH} \
 	file://0001-scripts-update-scripts-to-use-python3.patch \
 "
 

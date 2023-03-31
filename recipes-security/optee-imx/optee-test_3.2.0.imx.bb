@@ -12,9 +12,8 @@ inherit python3native
 FILESEXTRAPATHS_prepend := "${THISDIR}/${PN}:"
 
 SRCBRANCH = "lf-5.4.y"
-OPTEE_TEST_SRC ?= "git://source.codeaurora.org/external/imx/imx-optee-test.git;protocol=https"
 
-SRC_URI = "${OPTEE_TEST_SRC};branch=${SRCBRANCH} \
+SRC_URI = "git://github.com/nxp-imx/imx-optee-test.git;protocol=https;branch=${SRCBRANCH} \
            file://0003-sock_server-fix-compilation-against-musl-sys-errno.h.patch \
            file://0004-build-ignore-declaration-after-statement-warnings.patch \
            file://0005-benchmark_1000-fix-compilation-against-musl-uint.patch \
